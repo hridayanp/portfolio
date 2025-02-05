@@ -1,164 +1,72 @@
 import { motion } from 'framer-motion';
-import clearskyBg from '@/assets/images/common/bg-3.jpg';
-import { Button } from '@/components/ui/button';
-import { useState } from 'react';
-import undpLogo from '@/assets/images/partners/undp.svg';
-import gizLogo from '@/assets/images/partners/giz.svg';
-import lacunaLogo from '@/assets/images/partners/lacuna-white.svg';
+import clearskyBg from '@/assets/images/logo/dev-logo-1.jpg';
+import { BoxReveal } from '@/components/ui/box-reveal';
+import { Particles } from '@/components/ui/particles'; // Import Particles component
+
 const Home = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleButtonClick = () => {
-    window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLScweM50TptaixU-AdKux_BGdIwpu993IQhl2wczzxxg9jiu7Q/viewform?usp=preview',
-      '_blank',
-      'noopener,noreferrer'
-    );
-  };
-
   return (
     <section
       id="home"
-      className="relative h-screen w-full flex flex-col justify-between bg-fixed bg-center bg-cover sm:bg-cover sm:bg-no-repeat"
-      style={{
-        backgroundImage: `url(${clearskyBg})`,
-      }}
+      className="relative overflow-hidden h-screen min-h-screen w-full flex bg-[#0f2756] px-10"
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-70 pointer-events-none"></div>
+      {/* Particles Background */}
+      <Particles
+        className="absolute top-0 left-0 w-full h-full"
+        quantity={500} // Increased particle quantity for more density
+        staticity={30} // Faster interaction with mouse movement
+        ease={50} // Faster easing of particles movement
+        size={0.6} // Increased size of particles for more visibility
+        refresh={true} // Make particles refresh for interactivity
+        color="#fff" // Custom color for particles
+        vx={0.2} // Added horizontal velocity for movement
+        vy={0.4} // Added vertical velocity for movement
+      />
 
-      {/* Main Content */}
+      {/* Left Text Section */}
       <motion.div
-        className="relative top-[5%] z-10 flex-1 flex items-center justify-left text-center text-white px-4 sm:px-8"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        className="w-1/2 flex flex-col justify-center items-start text-left text-white px-6 sm:px-12 lg:px-16 relative z-10"
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false }}
         transition={{ duration: 0.8 }}
       >
-        {/* <div className="flex flex-col items-center justify-left space-y-4 max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-semibold leading-tight">
-            <div
-              className="flex justify-center gap-4 md:gap-[12rem] p-4 h-[100px] md:h-[190px]"
-              style={{ marginBottom: '50px' }}
-            >
-              <img
-                src={gizLogo}
-                alt="Like 1"
-                className="w-1/3 sm:w-1/2 md:w-1/3 object-contain"
-              />
-              <img
-                src={lacunaLogo}
-                alt="Like 2"
-                className="w-1/3 sm:w-1/2 md:w-1/3 object-contain"
-              />
-              <img
-                src={undpLogo}
-                alt="Like 3"
-                className="w-1/3 sm:w-1/2 md:w-1/3 object-contain"
-              />
-            </div>
-            ClearSky Hackathon
+        <BoxReveal width="100%" boxColor="#0652DD" duration={1}>
+          <h1 className="text-6xl sm:text-4xl lg:text-6xl font-semibold leading-tight">
+            Turning Vision Into Reality With Code.
           </h1>
-          <p className="font-medium sm:text-lg lg:text-xl max-w-xl mx-auto">
-            Decoding Air Quality in Patna and Gurugram
+        </BoxReveal>
+
+        <BoxReveal width="100%" boxColor="#0652DD" duration={1}>
+          <p className="font-medium sm:text-[16px] lg:text-[16px] max-w-xl mt-8">
+            As a skilled full-stack developer, I am passionate about building
+            scalable and efficient web applications. With a strong foundation in
+            backend and cloud technologies, I thrive on solving complex problems
+            and creating seamless digital experiences.
           </p>
-          <p></p>
-          <p></p>
-          <Button
-            variant="outline"
-            className={` text-[#222222] rounded-full border-none h-[50px] text-[16px] sm:w-1/2 sm:text-[18px] 
-              ${isHovered ? 'shadow-lg bg-white' : 'shadow-md'} 
-              transition-shadow duration-200`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            onClick={handleButtonClick}
-          >
-            Register
-          </Button>
-        </div> */}
-
-        <div className="flex flex-col items-center w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Images Section */}
-          <div className="flex justify-evenly w-full gap-6 py-6 flex-wrap">
-            <img
-              src={gizLogo}
-              alt="Like 1"
-              className="h-[150px] w-auto object-contain"
-            />
-            <img
-              src={lacunaLogo}
-              alt="Like 2"
-              className="h-[150px] w-auto object-contain"
-            />
-            <img
-              src={undpLogo}
-              alt="Like 3"
-              className="h-[150px] w-auto object-contain"
-            />
-          </div>
-
-          {/* Text & Button Section */}
-          <div className="flex flex-col items-center text-center gap-4">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-semibold leading-tight">
-              ClearSky Hackathon
-            </h1>
-            <p className="font-medium sm:text-lg lg:text-xl max-w-xl">
-              Decoding Air Quality in Patna and Gurugram
-            </p>
-
-            {/* Register Button */}
-            <Button
-              variant="outline"
-              className={`mt-7 text-[#222222] rounded-full border-none h-[50px] text-[16px] sm:w-1/2 sm:text-[18px] 
-      ${isHovered ? 'shadow-lg bg-white' : 'shadow-md'} 
-      transition-shadow duration-200`}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              onClick={handleButtonClick}
-            >
-              Register
-            </Button>
-          </div>
-        </div>
+        </BoxReveal>
       </motion.div>
 
-      {/* Conference Details */}
-      {/* <div
-        className="relative w-full py-6 text-white text-center z-20"
-        style={{ backgroundColor: '#3D944E' }}
-      >
-        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 px-4 sm:px-8">
-          <div className="flex-1">
-            <h3 className="text-lg sm:text-xl font-bold">Next Conference</h3>
-            <p className="mt-1 text-base sm:text-lg">Biggest Conference</p>
-          </div>
-
-          <div className="flex-1">
-            <h3 className="text-lg sm:text-xl font-bold">
-              Registration Open Date
-            </h3>
-            <p className="mt-1 text-base sm:text-lg">September 17th, 2014</p>
-          </div>
-
-          <div className="flex-1">
-            <h3 className="text-lg sm:text-xl font-bold">Location</h3>
-            <p className="mt-1 text-base sm:text-lg">
-              Oxford Street, London, UK
-            </p>
-          </div>
-
-          <div className="flex-1">
-            <h3 className="text-lg sm:text-xl font-bold">Time</h3>
-            <p className="mt-1 text-base sm:text-lg">09:45 AM - 10:15 PM</p>
-          </div>
+      {/* Right Image Section (Fixed Height to Prevent Overflow) */}
+      <div className="w-1/2 flex justify-center items-center overflow-hidden relative z-10">
+        <div className="relative w-[40%] h-[40%] flex justify-center items-center">
+          <motion.div
+            className="w-full h-full bg-cover bg-center rounded-lg shadow-lg"
+            style={{
+              backgroundImage: `url(${clearskyBg})`,
+              padding: '10px',
+            }}
+            animate={{ y: [-10, 0] }} // Less vertical movement to prevent overflow
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut',
+            }}
+          ></motion.div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
 
 export default Home;
-
-// in collaboration with experts, students, and
-//             enthusiasts to explore creative uses of hyperlocal pollution data
-//             and drive positive environmental change.
