@@ -1,4 +1,5 @@
 import { PageTransition } from '@/components/Animations/pageTransition';
+import { BoxReveal } from '@/components/ui/box-reveal';
 import { motion } from 'framer-motion';
 
 export const About = () => {
@@ -15,41 +16,55 @@ export const About = () => {
           viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold mb-4 my-8">
-            Let me tell you a bit more about me
-          </h2>
-          <p className="text-md mb-4 font-medium">
-            Hi, I'm Hridayan Phukan! 👋 I am a passionate Full-stack Developer
-            focusing on building efficient and scalable applications. I
-            specialize in frontend technologies like React, React Native and
-            SwiftUI, and I have hands-on experience in backend systems, cloud
-            technologies, and data management.
-          </p>
-          <p className="text-md mb-4 font-medium">
-            One of my key contributions to open-source has been to the UNDP’s
-            various projects. I helped develop tools and dashboards for climate
-            resilience, air quality monitoring, and data-driven decision-making
-            in agriculture. These projects have allowed me to work on real-time
-            data processing and API optimizations, improving performance by over
-            40%.
-          </p>
-          <p className="text-md mb-4 font-medium">
-            My professional journey has been incredibly rewarding, and I am
-            eager to take on new challenges and contribute to projects that have
-            a meaningful impact. Whether you need a developer for your next
-            project, or you’re looking to collaborate on an open-source
-            initiative, feel free to reach out. I look forward to working
-            together and bringing innovative solutions to life.
-          </p>
-          <motion.p
-            className="text-right font-semibold"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.8 }}
-          >
-            — Hridayan Phukan
-          </motion.p>
+          <BoxReveal width="100%" boxColor="#0652DD" duration={0.8}>
+            <h2 className="text-3xl font-bold mb-4 my-8">
+              Let me tell you a bit more about me
+            </h2>
+          </BoxReveal>
+
+          <BoxReveal width="100%" boxColor="#0652DD" duration={0.8}>
+            <p className="text-md mb-4 font-medium">
+              Hi, I'm Hridayan Phukan! 👋 I am a passionate Full-stack Developer
+              focusing on building efficient and scalable applications. I
+              specialize in frontend technologies like React, React Native and
+              SwiftUI, and I have hands-on experience in backend systems, cloud
+              technologies, and data management.
+            </p>
+          </BoxReveal>
+
+          <BoxReveal width="100%" boxColor="#0652DD" duration={0.8}>
+            <p className="text-md mb-4 font-medium">
+              One of my key contributions to open-source has been to the UNDP’s
+              various projects. I helped develop tools and dashboards for
+              climate resilience, air quality monitoring, and data-driven
+              decision-making in agriculture. These projects have allowed me to
+              work on real-time data processing and API optimizations, improving
+              performance by over 40%.
+            </p>
+          </BoxReveal>
+
+          <BoxReveal width="100%" boxColor="#0652DD" duration={0.8}>
+            <p className="text-md mb-4 font-medium">
+              My professional journey has been incredibly rewarding, and I am
+              eager to take on new challenges and contribute to projects that
+              have a meaningful impact. Whether you need a developer for your
+              next project, or you’re looking to collaborate on an open-source
+              initiative, feel free to reach out. I look forward to working
+              together and bringing innovative solutions to life.
+            </p>
+          </BoxReveal>
+
+          <BoxReveal width="100%" boxColor="#0652DD" duration={0.8}>
+            <motion.p
+              className="text-right font-semibold"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8 }}
+            >
+              — Hridayan Phukan
+            </motion.p>
+          </BoxReveal>
         </motion.div>
 
         {/* Right side: Image */}
