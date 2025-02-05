@@ -14,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 100) {
         setScrolling(true);
         setIcon('blue');
       } else {
@@ -34,8 +34,10 @@ const Header = () => {
 
   return (
     <motion.header
-      className={`fixed mt-5 top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolling ? 'bg-white shadow-md' : 'bg-transparent'
+      className={`fixed top-0 py-4 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolling
+          ? 'bg-transparent bg-opacity-30 backdrop-blur-lg shadow-md'
+          : 'bg-transparent'
       }`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
