@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import clearskyBg from '@/assets/images/logo/dev-logo-1.jpg';
 import { BoxReveal } from '@/components/ui/box-reveal';
 import { Particles } from '@/components/ui/particles'; // Import Particles component
+import { PageTransition } from '@/components/Animations/pageTransition';
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       id="home"
       className="relative overflow-hidden h-screen min-h-screen w-full flex bg-[#0f2756] px-10"
     >
+      <PageTransition />
       {/* Particles Background */}
       <Particles
         className="absolute top-0 left-0 w-full h-full"

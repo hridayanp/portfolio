@@ -1,14 +1,14 @@
 import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header/Header';
-import Landing from './pages/Landing/Landing';
+import AppRoutes from './routes/Routes';
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
         <Header />
-        <Landing />
+        <AppRoutes />
       </BrowserRouter>
     </div>
   );

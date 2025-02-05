@@ -61,7 +61,10 @@ const Header = () => {
         </ul>
 
         {/* Center - Logo */}
-        <div className="flex items-center justify-center w-auto cursor-pointer gap-4">
+        <div
+          className="flex items-center justify-center w-auto cursor-pointer gap-4"
+          onClick={() => navigate('/')}
+        >
           <h1 className="cursor-pointer text-4xl font-medium transition-colors text-white mr-14">
             HP
           </h1>
