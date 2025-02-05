@@ -1,0 +1,28 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    "types": ["vite/client", "vitest"],
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "noEmitOnError": false, // This allows emitting output even if there are errors
+    "strict": false, // Disable all strict type-checking options
+    "noUnusedLocals": false, // Allow unused local variables
+    "noUnusedParameters": false, // Allow unused function parameters
+    "noImplicitReturns": false, // Allow functions that don't always return a value
+    "noFallthroughCasesInSwitch": false, // Allow fallthrough cases in switch statements
+    "skipLibCheck": true // Skip type checking of all declaration files (*.d.ts)
+  }
+}

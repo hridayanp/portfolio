@@ -1,0 +1,91 @@
+/* Your styles goes here. */
+.app {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #d3d3d3 #e4ecf7;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e4ecf7;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #d3d3d3;
+    border-radius: 20px;
+    border: 1px solid #e4ecf7;
+  }
+
+  @media screen and (max-width: 1024px) {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+/* Styles for the Google Maps Autocomplete dropdown to match ShadCN dropdown UI */
+.pac-container {
+  pointer-events: fill;
+  background-color: var(--popover-background, #fff);
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 99999 !important; /* Ensure it appears above other elements */
+  font-family: var(--font-sans, sans-serif);
+  padding: 0 !important;
+}
+
+/* Individual items in the autocomplete dropdown */
+.pac-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--popover-foreground, #333);
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+}
+
+/* Hover effect similar to the ShadCN dropdown */
+.pac-item:hover {
+  background-color: var(--accent, #e2e8f0);
+}
+
+/* The selected item when navigated via keyboard */
+.pac-item-selected {
+  background-color: var(--accent, #e2e8f0);
+}
+
+/* The icon to the left of each prediction */
+.pac-icon {
+  margin-right: 8px;
+  height: 16px;
+  width: 16px;
+}
+
+/* Main text of the prediction (place name, street, etc.) */
+.pac-item-query {
+  font-weight: 500;
+  color: var(--popover-foreground, #000);
+}
+
+/* Additional text in the prediction (like the address) */
+.pac-item .pac-item-query + span {
+  color: var(--muted-foreground, #6b7280);
+}
+
+/* Matched part of the prediction, bold text for matching part of the query */
+.pac-matched {
+  font-weight: bold;
+}
