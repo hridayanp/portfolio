@@ -1,16 +1,25 @@
 import { PageTransition } from '@/components/Animations/pageTransition';
 import { BoxReveal } from '@/components/ui/box-reveal';
 import { motion } from 'framer-motion';
+import ImageAbout from '@/assets/images/common/Hridayan Phukan.jpeg';
+import { SparklesText } from '@/components/magicui/sparkles-text';
 
 export const About = () => {
+  const sparkleColors = [
+    { first: '#A07CFE', second: '#FE8FB5' }, // Purple & Pink
+    { first: '#FFD700', second: '#FFA500' }, // Gold & Orange
+    { first: '#00D4FF', second: '#007BFF' }, // Cyan & Blue
+    { first: '#FF5F6D', second: '#FFC371' }, // Red & Peach
+    { first: '#6AFFB0', second: '#28C76F' }, // Green & Mint
+  ];
+
   return (
     <div className="bg-[#f8f8f8]">
       <PageTransition />
-      {/* Full-screen Banner Section */}
-      <div className="flex items-center justify-between px-6 sm:px-12 lg:px-8 py-10 bg-gradient-to-r from-teal-500 to-teal-700 w-full h-screen">
-        {/* Left side: Biography */}
+      <div className="flex flex-col lg:flex-row items-center px-6 sm:px-12 lg:px-8 py-10 bg-[#0B1D29] w-full min-h-screen">
+        {/* Left Side: Biography */}
         <motion.div
-          className="w-1/2 flex flex-col justify-center items-start text-left text-white px-6 sm:px-12 lg:px-16 relative z-10"
+          className="lg:w-1/2 w-full flex flex-col justify-start items-start text-left text-white px-6 sm:px-12 lg:px-16 relative z-10"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false }}
@@ -26,7 +35,7 @@ export const About = () => {
             <p className="text-md mb-4 font-medium">
               Hi, I'm Hridayan Phukan! 👋 I am a passionate Full-stack Developer
               focusing on building efficient and scalable applications. I
-              specialize in frontend technologies like React, React Native and
+              specialize in frontend technologies like React, React Native, and
               SwiftUI, and I have hands-on experience in backend systems, cloud
               technologies, and data management.
             </p>
@@ -67,13 +76,28 @@ export const About = () => {
           </BoxReveal>
         </motion.div>
 
-        {/* Right side: Image */}
-        <div className="w-1/2 flex justify-center">
-          <img
-            src="https://your-image-link.com" // Replace with your image URL
-            alt="Hridayan Phukan"
-            className="w-3/4 rounded-full shadow-lg"
-          />
+        {/* Right Side: Image */}
+        <div className="lg:w-1/2 w-full flex justify-center relative mt-10 lg:mt-0">
+          <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg relative">
+            <img
+              src={ImageAbout} // Replace with your image URL
+              alt="Hridayan Phukan"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Remote Since Tag */}
+          <div className="absolute h-30 w-44 bottom-[-10%] left-1/2 transform -translate-x-1/2 bg-[#3A98B9] text-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center gap-3">
+            <p className="text-[20px] font-medium leading-none text-center">
+              Remote Since
+            </p>
+            <SparklesText
+              text="2021"
+              sparklesCount={5}
+              colors={sparkleColors[3]}
+              className="text-[30px] font-normal leading-none text-center"
+            />
+          </div>
         </div>
       </div>
     </div>

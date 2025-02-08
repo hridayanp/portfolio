@@ -10,16 +10,16 @@ const Landing = () => {
     <div className="overflow-x-hidden thin-scrollbar">
       <section
         id="home"
-        className="relative overflow-hidden h-screen min-h-screen w-full flex bg-[#0f2756] px-10"
+        className="relative overflow-hidden h-screen min-h-screen w-full flex bg-[#0B1D29] px-10"
       >
         <PageTransition />
         {/* Particles Background */}
         <Particles
           className="absolute top-0 left-0 w-full h-full"
-          quantity={500} // Increased particle quantity for more density
+          quantity={150} // Increased particle quantity for more density
           staticity={30} // Faster interaction with mouse movement
           ease={50} // Faster easing of particles movement
-          size={0.6} // Increased size of particles for more visibility
+          size={0.8} // Increased size of particles for more visibility
           refresh={true} // Make particles refresh for interactivity
           color="#fff" // Custom color for particles
           vx={0.2} // Added horizontal velocity for movement
@@ -53,9 +53,15 @@ const Landing = () => {
         {/* Right Image Section (Fixed Height to Prevent Overflow) */}
         <div className="w-1/2 flex justify-center items-center overflow-hidden relative z-10">
           <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent">
-            {/* <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
-              Skills
-            </span> */}
+            <div className="text-center">
+              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-100 bg-clip-text text-transparent dark:from-white dark:to-black text-[58px] font-semibold leading-none">
+                4+
+              </span>
+              <br />
+              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-200 bg-clip-text text-transparent dark:from-white dark:to-black text-[34px] font-semibold leading-none">
+                years of experience
+              </span>
+            </div>
 
             <OrbitingCircles iconSize={30} radius={100} color="#fff">
               {skillIcons.frontend.map((icon) => icon)}

@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom'; // Replacing scroll transition
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,10 +51,10 @@ const Header = () => {
             <li key={path}>
               <button
                 onClick={() => navigate(path)}
-                className={`cursor-pointer text-lg font-medium transition-colors ${
+                className={`cursor-pointer text-xl font-medium transition-colors ${
                   scrolling
-                    ? 'text-black hover:text-green-500'
-                    : 'text-white hover:text-green-500'
+                    ? 'text-black hover:underline hover:underline-offset-[12px]'
+                    : 'text-white hover:underline hover:underline-offset-[12px]'
                 }`}
               >
                 {title}
@@ -78,11 +79,7 @@ const Header = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-xl transition-colors ${
-              scrolling
-                ? 'text-black hover:text-green-500'
-                : 'text-white hover:text-green-500'
-            }`}
+            className="text-2xl text-[#E4405F] transition-all duration-300 hover:-translate-y-1"
           >
             <FaInstagram />
           </a>
@@ -90,13 +87,25 @@ const Header = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-xl transition-colors ${
-              scrolling
-                ? 'text-black hover:text-green-500'
-                : 'text-white hover:text-green-500'
-            }`}
+            className="text-2xl text-[#0077B5] transition-all duration-300 hover:-translate-y-1"
           >
             <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-[#fff] transition-all duration-300 hover:-translate-y-1"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-[#fff] transition-all duration-300 hover:-translate-y-1"
+          >
+            <FaXTwitter />
           </a>
         </div>
 
