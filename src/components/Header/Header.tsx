@@ -44,37 +44,31 @@ const Header = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <nav className="container mx-auto flex items-center justify-between px-8 py-2">
-        {/* Left - Navigation Menu */}
-        <ul className="hidden sm:flex space-x-8 px-8">
-          {navLinks.map(({ title, path }) => (
-            <li key={path}>
-              <button
-                onClick={() => navigate(path)}
-                className={`cursor-pointer text-xl font-medium transition-colors ${
-                  scrolling
-                    ? 'text-white hover:underline hover:underline-offset-[12px]'
-                    : 'text-white hover:underline hover:underline-offset-[12px]'
-                }`}
-              >
-                {title}
-              </button>
-            </li>
-          ))}
-        </ul>
+      <nav className="container mx-auto flex items-center justify-start px-8 py-2">
+        {/* Left - Logo & Navigation Menu */}
+        <div className="flex items-center space-x-10 ml-6">
+          {/* Logo */}
+          <div onClick={() => navigate('/')} className="cursor-pointer">
+            <h1 className="text-4xl font-medium text-white">HP</h1>
+          </div>
 
-        {/* Center - Logo */}
-        <div
-          className="flex items-center justify-center w-auto cursor-pointer gap-4"
-          onClick={() => navigate('/')}
-        >
-          <h1 className="cursor-pointer text-4xl font-medium transition-colors text-white mr-14">
-            HP
-          </h1>
+          {/* Navigation Menu */}
+          <ul className="hidden sm:flex space-x-8 px-8">
+            {navLinks.map(({ title, path }) => (
+              <li key={path}>
+                <button
+                  onClick={() => navigate(path)}
+                  className="cursor-pointer text-xl font-medium transition-colors text-white hover:underline hover:underline-offset-[12px]"
+                >
+                  {title}
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Right - Social Icons */}
-        <div className="hidden sm:flex space-x-6 px-8">
+        <div className="hidden sm:flex space-x-6 px-8 ml-auto">
           <a
             href="https://instagram.com"
             target="_blank"
@@ -110,7 +104,7 @@ const Header = () => {
         </div>
 
         {/* Hamburger Menu Button for Mobile */}
-        <div className="sm:hidden flex items-center">
+        <div className="sm:hidden flex items-center ml-auto">
           <button onClick={toggleMenu} className="focus:outline-none">
             <div className="relative w-8 h-6 flex flex-col justify-between items-center">
               <motion.div

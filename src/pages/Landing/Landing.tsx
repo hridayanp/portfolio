@@ -53,7 +53,7 @@ const Landing = () => {
         {/* Right Image Section (Fixed Height to Prevent Overflow) */}
         <div className="w-1/2 flex justify-center items-center overflow-hidden relative z-10">
           <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent">
-            <div className="text-center">
+            {/* <div className="text-center">
               <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-100 bg-clip-text text-transparent dark:from-white dark:to-black text-[58px] font-semibold leading-none">
                 4+
               </span>
@@ -61,7 +61,7 @@ const Landing = () => {
               <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-200 bg-clip-text text-transparent dark:from-white dark:to-black text-[34px] font-semibold leading-none">
                 years of experience
               </span>
-            </div>
+            </div> */}
 
             <OrbitingCircles iconSize={30} radius={100} color="#fff">
               {skillIcons.frontend.map((icon) => icon)}
