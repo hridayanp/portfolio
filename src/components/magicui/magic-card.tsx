@@ -126,9 +126,9 @@ interface MagicCardProps {
 export function MagicCard({
   children,
   className,
-  gradientSize = 200,
+  gradientSize = 150,
   gradientColor = 'rgba(255, 255, 255, 0.2)', // Subtle white glow effect
-  gradientOpacity = 0.4,
+  gradientOpacity = 0.5,
   gradientFrom = 'rgba(255, 255, 255, 0.3)',
   gradientTo = 'rgba(255, 255, 255, 0)', // Fades into transparency
 }: MagicCardProps) {

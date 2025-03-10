@@ -32,7 +32,7 @@ export const About = () => {
           </BoxReveal>
 
           <BoxReveal width="100%" boxColor="#0652DD" duration={0.8}>
-            <p className="text-md mb-4 font-medium">
+            <p className="text-md mb-4 font-medium leading-relaxed">
               Hi, I'm Hridayan Phukan! 👋 I am a passionate Full-stack Developer
               focusing on building efficient and scalable applications. I
               specialize in frontend technologies like React, React Native, and
@@ -42,7 +42,7 @@ export const About = () => {
           </BoxReveal>
 
           <BoxReveal width="100%" boxColor="#0652DD" duration={0.8}>
-            <p className="text-md mb-4 font-medium">
+            <p className="text-md mb-4 font-medium leading-relaxed">
               One of my key contributions to open-source has been to the UNDP’s
               various projects. I helped develop tools and dashboards for
               climate resilience, air quality monitoring, and data-driven
@@ -53,7 +53,7 @@ export const About = () => {
           </BoxReveal>
 
           <BoxReveal width="100%" boxColor="#0652DD" duration={0.8}>
-            <p className="text-md mb-4 font-medium">
+            <p className="text-md mb-4 font-medium leading-relaxed">
               My professional journey has been incredibly rewarding, and I am
               eager to take on new challenges and contribute to projects that
               have a meaningful impact. Whether you need a developer for your
