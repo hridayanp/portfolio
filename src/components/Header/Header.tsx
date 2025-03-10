@@ -30,7 +30,7 @@ const Header = () => {
 
   const navLinks = [
     { title: 'About', path: '/about' },
-    { title: 'Project', path: '/project' },
+    { title: 'Projects', path: '/projects' },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Header = () => {
                 onClick={() => navigate(path)}
                 className={`cursor-pointer text-xl font-medium transition-colors ${
                   scrolling
-                    ? 'text-black hover:underline hover:underline-offset-[12px]'
+                    ? 'text-white hover:underline hover:underline-offset-[12px]'
                     : 'text-white hover:underline hover:underline-offset-[12px]'
                 }`}
               >
