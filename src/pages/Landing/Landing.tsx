@@ -4,6 +4,7 @@ import { Particles } from '@/components/ui/particles'; // Import Particles compo
 import { PageTransition } from '@/components/Animations/pageTransition';
 import { OrbitingCircles } from '@/components/ui/orbiting-circles';
 import { skillIcons } from '@/components/Icons/Icons';
+import { InfiniteTypingAnimation } from '@/components/Animations/InfiniteTypingAnimation';
 
 const Landing = () => {
   return (
@@ -34,6 +35,17 @@ const Landing = () => {
           viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
+          <InfiniteTypingAnimation
+            texts={[
+              '< Hello, World! />',
+              '< Namaste, World! />',
+              '< Bonjour, World! />',
+              '< Konnichiwa, World! />',
+            ]}
+            typingSpeed={100}
+            eraseSpeed={100}
+            pauseTime={1000}
+          />
           <BoxReveal width="100%" boxColor="#0652DD" duration={1}>
             <h1 className="text-6xl sm:text-4xl lg:text-6xl font-semibold leading-tight">
               Turning Vision Into Reality With Code.
@@ -41,7 +53,7 @@ const Landing = () => {
           </BoxReveal>
 
           <BoxReveal width="100%" boxColor="#0652DD" duration={1}>
-            <p className="font-medium sm:text-[16px] lg:text-[16px] max-w-xl mt-8">
+            <p className="font-medium sm:text-[16px] lg:text-[16px] max-w-xl mt-8 leading-relaxed">
               As a skilled full-stack developer, I am passionate about building
               scalable and efficient web applications. With a strong foundation
               in backend and cloud technologies, I thrive on solving complex
