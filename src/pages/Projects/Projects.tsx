@@ -32,7 +32,7 @@ const projects = Array(6).fill({
 
 const Projects = () => {
   return (
-    <div className="bg-[#0B1D29] min-h-screen">
+    <div className="bg-[#0B1D29] min-h-screen pb-14">
       <PageTransition />
 
       {/* Animated Background */}
