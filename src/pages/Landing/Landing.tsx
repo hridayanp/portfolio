@@ -47,7 +47,7 @@ const Landing = () => {
             pauseTime={1000}
           />
           <BoxReveal width="100%" boxColor="#0652DD" duration={1}>
-            <h1 className="text-6xl sm:text-4xl lg:text-6xl font-semibold leading-tight">
+            <h1 className="text-6xl sm:text-4xl lg:text-6xl font-semibold leading-snug">
               Turning Vision Into Reality With Code.
             </h1>
           </BoxReveal>
