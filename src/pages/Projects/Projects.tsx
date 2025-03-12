@@ -3,10 +3,10 @@
 import { PageTransition } from '@/components/Animations/pageTransition';
 import { motion } from 'framer-motion';
 import { ProjectCard } from './ProjectCard';
-import ImageAbout from '@/assets/images/common/Hridayan Phukan.jpeg';
 
 import Vayu from '@/assets/images/projects/vayu.png';
 import Dicra from '@/assets/images/projects/dicra.png';
+import Climachain from '@/assets/images/projects/climachain.png';
 
 import { AnimatedGridPattern } from '@/components/magicui/animated-grid-pattern';
 import { cn } from '@/lib/utils';
@@ -41,8 +41,8 @@ const projects = [
     organization: 'UNDP | Open Source',
     image: Vayu,
     description:
-      'VAYU - OpenAir is a public repository for open-source software, algorithms, and hyperlocal air pollution data in Indian cities like Patna and Gurgaon. This initiative, backed by UNDP, GIZ, and citizen scientists, leverages IoT sensors, crowdsourced data, and AI/ML to model an ‘Open Digital Stack on Air Pollution.’ The goal is to create a scalable, open-source framework for cities worldwide to combat air pollution collaboratively.',
-    stack: ['ReactJS', 'React-Query', 'Redux', 'PWA'],
+      'Designed and developed the entire frontend for VAYU - OpenAir from scratch, building an intuitive and responsive UI to showcase air pollution data effectively. I implemented interactive data visualizations, optimized performance, and ensured seamless user experience while integrating open-source geospatial datasets and APIs.',
+    stack: ['ReactJS', 'React-Query', 'Redux', 'Tailwind'],
     link: 'https://vayu.undp.org.in/',
   },
   {
@@ -51,48 +51,26 @@ const projects = [
     image: Dicra,
     organization: 'UNDP | Nabard | Open Source',
     description:
-      'DiCRA is a collaborative digital public good providing open access to key geospatial datasets for climate-resilient agriculture. Curated by data scientists and citizen scientists worldwide, it enables evidence-driven policymaking for sustainable food systems. Guided by digital public good principles, DiCRA promotes open access, open software, and open APIs. ',
-    stack: ['ReactJS', 'React-Query', 'Redux', 'PWA'],
+      'Designed and developed the entire landing page and key components for geospatial map visualization, building a seamless and interactive user interface. I focused on optimizing performance and, integrating geospatial datasets. The platform effectively presents climate-resilient agriculture insights while adhering to open data principles and supporting collaborative data-driven policymaking.',
+    stack: ['ReactJS', 'Leaflet', 'Redux', 'Apexcharts'],
     link: 'https://dicra.nabard.org/',
   },
   {
     id: 3,
-    title: 'Project Three',
-    image: ImageAbout,
-    organization: 'UNDP | Open Source',
-    description: 'Short details about Project Three.',
+    title: 'ClimaChain',
+    image: Climachain,
+    organization: 'Hackathon | mistEO',
+    description:
+      'Developed the entire frontend for mistEO’s parametric risk transfer solution, which was selected as one of the top 3 innovations in the CGIAR Accelerate for Impact Platform (A4IP). The platform enables financial resilience through cutting-edge technology, and its success in the acceleration program highlights the impact of delivering a scalable and user-friendly experience.',
     stack: ['ReactJS', 'React-Query', 'Redux', 'PWA'],
-  },
-  {
-    id: 4,
-    title: 'Project Four',
-    image: ImageAbout,
-    organization: 'UNDP | Open Source',
-    description: 'A brief summary of Project Four.',
-    stack: ['ReactJS', 'React-Query', 'Redux', 'PWA'],
-  },
-  {
-    id: 5,
-    title: 'Project Five',
-    image: ImageAbout,
-    organization: 'UNDP | Open Source',
-    description: 'Some insight on Project Five.',
-    stack: ['ReactJS', 'React-Query', 'Redux', 'PWA'],
-  },
-  {
-    id: 6,
-    title: 'Project Six',
-    image: ImageAbout,
-    organization: 'UNDP | Open Source',
-    description: 'Details about Project Six.',
-    stack: ['ReactJS', 'React-Query', 'Redux', 'PWA'],
+    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7199035427687694337/',
   },
 ];
 
 const formatStack = (stack: string[]) => (
   <div className="flex items-center gap-1 text-white italic">
     {stack.map((tech, index) => (
-      <span key={tech} className="flex items-center">
+      <span key={tech} className="flex items-center ">
         {tech}
         {index !== stack.length - 1 && <Dot className="ml-1 w-5 h-5" />}
       </span>
@@ -128,7 +106,7 @@ const projectsData = projects.map((project) => ({
     </div>
   ),
   contentSection: (
-    <p className="font-medium sm:text-[16px] lg:text-[16px] max-w-xl h-[250px] mt-4 leading-relaxed">
+    <p className="font-medium sm:text-[16px] lg:text-[16px] max-w-xl mt-4 leading-relaxed">
       {project.description}
     </p>
   ),

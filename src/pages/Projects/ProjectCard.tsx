@@ -21,7 +21,7 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <MagicCard
-      className={`w-full max-w-md p-4 ${className} rounded-lg h-[650px] flex flex-col`}
+      className={`w-full max-w-md p-4 ${className} rounded-lg h-[640px] flex flex-col`}
     >
       <div className="flex flex-col w-full h-full">
         {/* Top Section (Image with Lens Effect) */}
